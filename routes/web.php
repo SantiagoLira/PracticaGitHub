@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\controladorVistas;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('formulario', [ControladorVistas::class,'showFormulario'])->name('formulario');
+Route::post('comprobarFormulario',[controladorVistas::class,'comprobarFormulario'])->name('comprobarFormulario');
